@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Root Finder Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Root Finding Visualizer</h1>
+            <div class="badge">Esearchers-414</div>
+        </header>
+
+        <form id="solver-form">
+            <div class="input-grid">
+                <div class="input-group">
+                    <label for="equation">Equation</label>
+                    <input type="text" id="equation" name="equation" placeholder="e.g. x^3 - x - 2">
+                </div>
+                
+                <div class="input-group">
+                    <label for="interval">Interval (a, b)</label>
+                    <input type="text" id="interval" name="interval" placeholder="e.g. 1, 2">
+                </div>
+
+                <div class="input-group">
+                    <label for="method">Method</label>
+                    <select id="method" name="method">
+                        <option value="Bisection">Bisection</option>
+                        <option value="Newton-Raphson">Newton-Raphson</option>
+                        <option value="Secant">Secant</option>
+                        <option value="Regular False Position">Regular False Position</option>
+                        <option value="All">All Methods (Compare)</option>
+                    </select>
+                </div>
+            </div>
+            
+            <button type="button" id="solve-button">
+                Calculate Roots
+            </button>
+        </form>
+
+        <div id="result-container">
+            <div id="result">Enter an equation to begin...</div>
+        </div>
+
+        <div class="chart-wrapper">
+            <canvas id="comparative-chart"></canvas>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='JS/script.js') }}"></script>
+</body>
+</html>
