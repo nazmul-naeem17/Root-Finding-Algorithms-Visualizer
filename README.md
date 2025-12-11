@@ -7,7 +7,6 @@
 
 A web-based interactive tool to visualize and compare numerical methods for finding roots of non-linear equations. Built for the **CSE-4745/4746 Numerical Methods** course.
 
-![Project Screenshot](https://via.placeholder.com/800x400?text=Run+Project+And+Take+Screenshot)
 ## 🚀 Features
 
 * **Equation Parsing:** Supports complex mathematical inputs (e.g., `x^3 - x - 2`, `sin(x) - x/2`) using SymPy.
